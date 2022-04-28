@@ -50,7 +50,7 @@ def survey_update(request, pk):
     # choice = Choice.objects.filter(question_id=pk) # Question 연결된 Choice는 다중이라 오류 발생
     if request.method == 'POST':
         form1 = QuestionUpdateForm(request.POST)
-        form2 = QuestionUpdateForm(request.POST)
+        # form2 = ChoiceUpdateForm(request.POST)
         if form1.is_valid():
             question.title = request.POST["title"]
             question.notice = request.POST["notice"]
