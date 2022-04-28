@@ -15,7 +15,13 @@ class Question(models.Model):
 
 # Question 모델과 OneToOne 관계, 세부항목 추가 모델
 class Choice(models.Model):
+    CATEGORY_CHOICE = (
+        ('CC', 'checkbox'),
+        ('RR', 'radio'),
+        ('SS', 'select'),
+    )
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
+    category = models.CharField(max_length=10, choices=CATEGORY_CHOICE, default='CC', verbose_name="유형 선택")
     choice_title = models.CharField(max_length=100, verbose_name="질문")
     item1 = models.CharField(max_length=100, verbose_name="옵션")
     item2 = models.CharField(max_length=100, blank=True, null=True, verbose_name="옵션")

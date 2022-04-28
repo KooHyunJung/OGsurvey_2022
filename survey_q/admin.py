@@ -8,8 +8,7 @@ from survey_q.models import Question, Choice
 
 class ChoiceInline(admin.TabularInline):
     model = Choice
-    min_num = 3
-    max_num = 6
+    min_num = 1
     verbose_name="설문 질문 항목"
 
 @admin.register(Question)

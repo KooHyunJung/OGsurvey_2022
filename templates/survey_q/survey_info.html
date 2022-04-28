@@ -8,7 +8,17 @@
 
 <!--content-->
 {% block content %}
-    <div>안녕</div>
+    {% if survey %}
+        {% for data in survey %}
+        <div>{{ data.title }}</div>
+        <div>{{ data.writer }}</div>
+        <div>{{ data.notice }}</div>
+        <div>{{ data.choice_set.all.count }}</div>
+        <div>{{ data.participant_set.all.count }}</div>
+        <div>{{ data.created_at|date:'Y-m-d' }}</div>
+        <div>{{ data.updated_at|date:'Y-m-d' }}</div>
+        {% endfor %}
+    {% endif %}
 
     <!-- <script defer src="/static/js/survey_info.js"></script> -->
 {% endblock content %}

@@ -8,7 +8,7 @@ from survey_a.models import Participant, Answer
 
 class AnswerInline(admin.TabularInline):
     model = Answer
-    min_num = 6
+    min_num = 1
     verbose_name="설문 응답 항목"
 
 @admin.register(Participant)
