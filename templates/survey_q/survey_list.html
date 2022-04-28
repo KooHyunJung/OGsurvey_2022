@@ -36,7 +36,8 @@
                     <td>{{ data.writer }}</td>
                     <td>{{ data.created_at|date:'Y-m-d' }}</td>
                     <td><div class="btn-list" style="text-align: center;">
-                        <a href="{% url 'survey_q:detail' data.id %}">링크</a>
+                        <input type="text" id="text{{data.id}}" value="http://127.0.0.1:8000/survey/detail/{{data.id}}" style="display: none;">
+                        <input type="button" onclick="fn_final( '{{data.id}}' )" value="링크"/>
                         <a href="{% url 'survey_q:update' data.id %}">수정</a>
                         <a style="background-color: brown;" href="{% url 'survey_q:delete' data.id %}" onclick="return delchk();">삭제</a>
                     </div></td>

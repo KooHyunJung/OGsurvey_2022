@@ -20,12 +20,6 @@ def survey_list(request):
         return redirect("survey_q:create")
 
 @login_required
-def send_survey_detail(request, pk):
-    if request.method == 'GET':
-        survey = Question.objects.filter(id=pk)
-        return render(request, "survey_q/survey_detail.html", { 'survey': survey })
-
-@login_required
 def survey_information(request, pk):
     if request.method == 'GET':
         survey = Question.objects.filter(id=pk)
