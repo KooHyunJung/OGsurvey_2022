@@ -18,8 +18,8 @@
         <a class="link" href="#">Survey Logo</a>
     </nav>
     <nav id="nav">
-        <a class="link-1" href="#">survey list</a>
-        <a class="link-1" href="#">survey create</a>
+        <a class="link-1" href="{% url 'survey_q:list' %}">survey list</a>
+        <a class="link-1" href="{% url 'survey_q:create' %}">survey create</a>
         {% if user.is_authenticated %}
             <a class="link-1" href="{% url 'user:logout' %}">logout</a>
         {% else %}
