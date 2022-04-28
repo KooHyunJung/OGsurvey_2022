@@ -16,14 +16,15 @@
                     <th style="width:30%">제목</th>
                     <th style="width:10%">문항</th>
                     <th style="width:10%">응답</th>
-                    <th style="width:20%">작성자</th>
-                    <th style="width:20%">작성일자</th>
+                    <th style="width:10%">작성자</th>
+                    <th style="width:15%">작성일자</th>
+                    <th style="width:15%">작업버튼</th>
                 </tr>
             </thead>
             <tbody>
             {% if list %}
                 {% for data in list %}
-                <tr class="{% if forloop.counter|divisibleby:2 %}even_bgcolor{% endif %}">
+                <tr>
                     <td>{{ forloop.counter }}</td>
                     <td>
                         <a href="{% url 'survey_q:info' data.id %}">
@@ -34,6 +35,11 @@
                     <td>{{ data.participant_set.all.count }}</td>
                     <td>{{ data.writer }}</td>
                     <td>{{ data.created_at|date:'Y-m-d' }}</td>
+                    <td><div class="btn-list" style="text-align: center;">
+                        <a href="{% url 'survey_q:detail' data.id %}">링크</a>
+                        <a href="{% url 'survey_q:update' data.id %}">수정</a>
+                        <a style="background-color: brown;" href="{% url 'survey_q:delete' data.id %}" onclick="return delchk();">삭제</a>
+                    </div></td>
                 </tr>
                 {% endfor %}
             {% else %}
@@ -45,5 +51,5 @@
         </table>
     </div>
 
-    <!-- <script defer src="/static/js/survey_list.js"></script> -->
+    <script defer src="/static/js/survey_list.js"></script>
 {% endblock content %}

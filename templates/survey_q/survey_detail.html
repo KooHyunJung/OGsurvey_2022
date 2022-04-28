@@ -1,0 +1,53 @@
+{% extends 'main_nav.html' %}
+{% load static %}
+{% block title %} survey detail {% endblock %}
+
+{% block style %}
+    <link href="/static/css/survey_detail.css" rel="stylesheet" type="text/css">
+{% endblock %}
+
+<!--content-->
+{% block content %}
+    {% for survey in survey %}
+    <div class="survey-detail">
+        <div class="form">
+        <form class="survey-form">
+            <h2>{{survey.title}}</h2>
+            <div>{{survey.notice}}</div>
+        </form>
+        </div>
+    </div>
+
+        <div class="survey-detail">
+            <div class="forms">
+            <!-- action url 변경 필요 -->
+            {% for choice in survey.choice_set.all %}
+            <form class="survey-form" method="post" action="{% url 'survey_q:create' %}">
+                {% csrf_token %}
+                <h3>{{ forloop.counter }}. {{choice.choice_title}}</h3>
+                <label><input type={{choice.category}} name="num" value="1">{{choice.item1}}</label><br>
+                <label><input type={{choice.category}} name="num" value="2">{{choice.item2}}</label><br>
+                <label><input type={{choice.category}} name="num" value="3">{{choice.item3}}</label><br>
+                <label><input type={{choice.category}} name="num" value="4">{{choice.item4}}</label><br>
+                <label><input type={{choice.category}} name="num" value="5">{{choice.item5}}</label><br>
+                <label><input type={{choice.category}} name="num" value="6">{{choice.item6}}</label><br>
+            {% endfor %}
+            </form>
+            </div>
+        </div>
+    {% endfor %}
+    <div class="survey-detail" style="margin-bottom: 200px;">
+        <div class="form">
+            <form class="survey-form" method="post" action="{% url 'survey_q:create' %}">
+                {% csrf_token %}
+                <h3>설문해 주셔서 감사합니다. 작성자의 [전화번호]를 입력해 주세요.</h3>
+                <input type="text" placeholder="전화번호 입력 예시 : 010-0000-0000" name="phone">
+                
+                <button type="submit" style="width: 70%; min-width: 250px;">설문 작성 완료하기</button>
+            </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- <script defer src="/static/js/survey_detail.js"></script> -->
+{% endblock content %}

@@ -1,0 +1,110 @@
+.survey-info {
+    width: 90%;
+    max-width: 840px;
+    padding: 32px 0 0;
+    margin: 20px auto;
+}
+
+.form {
+    position: relative;
+    background: #FFFFFF;
+    max-width: 800px;
+    margin: 0 auto 0;
+    padding: 45px;
+    /* text-align: center; */
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+/* .btn-list button {
+    text-transform: uppercase;
+    outline: 0;
+    background: #000000;
+    width: 20%;
+    border: 0;
+    padding: 10px;
+    color: #ffffff;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+} */
+
+.btn-list a {
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: uppercase;
+    outline: 0;
+    background: #000000;
+    width: 20%;
+    border: 0;
+    padding: 10px;
+    color: #ffffff;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+}
+.btn-list a:hover,
+.btn-list a:active,
+.btn-list a:focus {
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+button:hover,
+button:active,
+button:focus {
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+/* 설문 통계표 */
+.content {
+    max-width:880px;
+    margin: 20px auto;
+}
+
+table.board {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    line-height: 1.5;
+}
+
+table.board thead th{
+    padding: 10px 0;
+    font-weight: bold;
+    vertical-align: top;
+    color: #000000;
+    border-bottom: 3px solid #000000;
+}
+
+table.board tbody th {
+    padding: 10px 0;
+    font-weight: bold;
+    vertical-align: top;
+    border-bottom: 1px solid #ccc;
+    background: #f3f6f7;
+}
+
+table.board td {
+    padding: 10px 0;
+    vertical-align: top;
+    border-bottom: 1px solid #ccc;
+}
+
+.csv {
+    width: 100%;
+    max-width: 840px;
+    margin: 30px auto;
+}
+.csv button {
+    outline: 0;
+    background: #000000;
+    width: 150px;
+    border: 0;
+    padding: 10px;
+    color: #ffffff;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+}
