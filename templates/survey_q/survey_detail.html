@@ -20,9 +20,8 @@
 
         <div class="survey-detail">
             <div class="forms">
-            <!-- action url 변경 필요 -->
             {% for choice in survey.choice_set.all %}
-            <form class="survey-form" method="post" action="{% url 'survey_q:create' %}">
+            <form class="survey-form" method="post" action="#">
                 {% csrf_token %}
                 <h3>{{ forloop.counter }}. {{choice.choice_title}}</h3>
                 <label><input type={{choice.category}} name="num" value="1">{{choice.item1}}</label><br>
@@ -38,7 +37,7 @@
     {% endfor %}
     <div class="survey-detail" style="margin-bottom: 200px;">
         <div class="form">
-            <form class="survey-form" method="post" action="{% url 'survey_q:create' %}">
+            <form class="survey-form" method="post" action="#">
                 {% csrf_token %}
                 <h3>설문해 주셔서 감사합니다. 작성자의 [전화번호]를 입력해 주세요.</h3>
                 <input type="text" placeholder="전화번호 입력 예시 : 010-0000-0000" name="phone">

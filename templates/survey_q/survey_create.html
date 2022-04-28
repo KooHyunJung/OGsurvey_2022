@@ -15,23 +15,23 @@
             <h3>Survey Title</h3>
             <input type="text" placeholder="설문지 제목" name="title">
             <input type="text" placeholder="설문지 설명" name="notice">
-            <!-- <button type="submit">complete</button> -->
-        </form>
+            <button type="submit">complete</button>
+        <!-- </form> -->
         </div>
     </div>
 
     <div class="survey-create">
         <div class="form">
-        <form class="survey-form" method="post" action="{% url 'survey_q:create' %}">
-            {% csrf_token %}
+        <!-- <form class="survey-form" method="post" action="{% url 'survey_q:create' %}"> -->
+            <!-- {% csrf_token %} -->
             <h3>Survey Question</h3>
 
             <label for="pet-select">choose a option:</label>
-            <select name="pets" id="pet-select">
+            <select name="category">
                 <!-- <option value="">--Please choose an option--</option> -->
-                <option value="CC">Checkbox</option>
-                <option value="RR">Radio</option>
-                <option value="SS">Select</option>
+                <option value="checkbox">Checkbox</option>
+                <option value="radio">Radio</option>
+                <option value="select">Select</option>
             </select>
 
             <input type="text" placeholder="질문 (필수 입력)" name="choice_title">
@@ -45,12 +45,12 @@
         </div>
     </div>
     <!-- 추가 질문 항목  -->
-    <div class="question-option"></div>
+    <!-- <div class="question-option"></div>
 
     <footer>
-        <a class="link-2" href="#">Add Question</a>
-        <a class="link-2" href="#">Complete !!</a>
-    </footer>
+        <a class="link-2" onclick="">Add Question</a>
+        <a class="link-2" type="submit">Complete !!</a>
+    </footer> -->
 
 
 
