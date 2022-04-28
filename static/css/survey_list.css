@@ -46,3 +46,18 @@ table.board td {
     transition: all 0.3 ease;
     cursor: pointer;
 }
+
+.btn-list input {
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: uppercase;
+    background: #000000;
+    border-radius: 15px;
+    border: 0;
+    padding: 5px;
+    color: #ffffff;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+}

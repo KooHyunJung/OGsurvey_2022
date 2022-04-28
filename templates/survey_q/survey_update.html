@@ -8,7 +8,16 @@
 
 <!--content-->
 {% block content %}
-    <div>안녕</div>
-
+    <div class="survey-update">
+        <div class="form">
+            <form action="" method="POST">
+                {% csrf_token %}
+                <div>
+                    {{ question }}
+                    <button type="submit">수정</button>
+                </div>
+            </form>
+        </div>
+    </div>
     <!-- <script defer src="/static/js/survey_update.js"></script> -->
 {% endblock content %}

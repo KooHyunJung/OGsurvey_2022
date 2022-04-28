@@ -21,10 +21,8 @@
                 <div>생성일: {{ data.created_at|date:'Y-m-d' }}</div>
                 <div>수정일: {{ data.updated_at|date:'Y-m-d' }}</div>
                 <div class="btn-list" style="text-align: center; margin-top: 24px;">
-                    <a href="{% url 'survey_q:detail' data.id %}">미리보기</a>
-                    <a href="{% url 'survey_q:detail' data.id %}">링크복사</a>
+                    <a href="{% url 'survey_a:detail' data.id %}">미리보기</a>
                     <a href="{% url 'survey_q:update' data.id %}">수정하기</a>
-                    <a href="{% url 'survey_q:delete' data.id %}">삭제하기</a>
                 </div>
             </form>
             </div>
