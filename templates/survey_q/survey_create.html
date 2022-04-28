@@ -1,0 +1,58 @@
+{% extends 'main_nav.html' %}
+{% load static %}
+{% block title %} survey create {% endblock %}
+
+{% block style %}
+    <link href="/static/css/survey_create.css" rel="stylesheet" type="text/css">
+{% endblock %}
+
+<!--content-->
+{% block content %}
+    <div class="survey-create">
+        <div class="form">
+        <form class="survey-form" method="post" action="{% url 'survey_q:create' %}">
+            {% csrf_token %}
+            <h3>Survey Title</h3>
+            <input type="text" placeholder="설문지 제목" name="title">
+            <input type="text" placeholder="설문지 설명" name="notice">
+            <!-- <button type="submit">complete</button> -->
+        </form>
+        </div>
+    </div>
+
+    <div class="survey-create">
+        <div class="form">
+        <form class="survey-form" method="post" action="{% url 'survey_q:create' %}">
+            {% csrf_token %}
+            <h3>Survey Question</h3>
+
+            <label for="pet-select">choose a option:</label>
+            <select name="pets" id="pet-select">
+                <!-- <option value="">--Please choose an option--</option> -->
+                <option value="CC">Checkbox</option>
+                <option value="RR">Radio</option>
+                <option value="SS">Select</option>
+            </select>
+
+            <input type="text" placeholder="질문 (필수 입력)" name="choice_title">
+            <input type="text" placeholder="옵션1 (필수 입력)" name="item1">
+            <input type="text" placeholder="옵션2 (필수 입력)" name="item2">
+            <input type="text" placeholder="옵션3" name="item3">
+            <input type="text" placeholder="옵션4" name="item4">
+            <input type="text" placeholder="옵션5" name="item5">
+            <input type="text" placeholder="옵션6 (최대6개)" name="item6">
+        </form>
+        </div>
+    </div>
+    <!-- 추가 질문 항목  -->
+    <div class="question-option"></div>
+
+    <footer>
+        <a class="link-2" href="#">Add Question</a>
+        <a class="link-2" href="#">Complete !!</a>
+    </footer>
+
+
+
+    <!-- <script defer src="/static/js/survey_create.js"></script> -->
+{% endblock content %}

@@ -1,0 +1,48 @@
+.content {
+    max-width:880px;
+    margin: 20px auto;
+}
+
+table.board {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    line-height: 1.5;
+}
+
+table.board thead th{
+    padding: 10px 0;
+    font-weight: bold;
+    vertical-align: top;
+    color: #000000;
+    border-bottom: 3px solid #000000;
+}
+
+table.board tbody th {
+    padding: 10px 0;
+    font-weight: bold;
+    vertical-align: top;
+    border-bottom: 1px solid #ccc;
+    background: #f3f6f7;
+}
+
+table.board td {
+    padding: 10px 0;
+    vertical-align: top;
+    border-bottom: 1px solid #ccc;
+}
+
+.btn-list a {
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: uppercase;
+    background: #000000;
+    border-radius: 15px;
+    border: 0;
+    padding: 5px;
+    color: #ffffff;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+}
